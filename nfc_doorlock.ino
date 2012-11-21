@@ -1,4 +1,3 @@
-
 #include <SoftwareSerial.h>
 
 
@@ -13,14 +12,14 @@ int i ;
 #define rxPin 9
 #define txPin 10
 
-SoftwareSerial rfid( rxPin, txPin );  
+SoftwareSerial rfid( rxPin, txPin ); // Setup software serial for reader
 
 void setup()
 {
   pinMode(door, OUTPUT);             // Define door output
   digitalWrite(door, LOW);           // Door switch to off 
-  Serial.begin(9600);                // Setup serial port for Pc side
-  rfid.begin(9600);                  // Setup software serial for reader side
+  Serial.begin(9600);                // Setup serial port for Pc side to 9600 baud
+  rfid.begin(9600);                  // Setup software serial for reader side to 9600 baud
 }
 
 void loop()
